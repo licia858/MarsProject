@@ -26,7 +26,7 @@
 
     <div class="col-md-8">
       <h2>Featured Mars Image</h2>
-      <img src="http://www.jpl.nasa.gov/{{mars_listing.featured_image_url}}" alt="Mars">
+      <img src={{mars_listing.featured_image_url}}" alt="Featured">
     </div>
     
     <div class="col-md-4">
@@ -86,7 +86,17 @@
           </tbody>
         </table>
     </div>
-    
+
+    <div class="col-md-6">
+    <h2>Mars Hemispheres</h2>
+    {% for hem in mars_listing.mars_hemisphere %}
+          <p>{{ hem.title }}</p>
+
+          <img src="{{ hem.img_url }}">
+      {% endfor %}
+
+    <img src={{mars_listing.mars_hemisphere}}>
+    </div>
   </div>
   </div>
 </body>
