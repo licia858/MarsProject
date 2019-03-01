@@ -87,16 +87,19 @@
         </table>
     </div>
 
-    <div class="col-md-6">
-    <h2>Mars Hemispheres</h2>
-    {% for hem in mars_listing.mars_hemisphere %}
-          <p>{{ hem.title }}</p>
 
-          <img src="{{ hem.img_url }}">
+    
+    <h2>Mars Hemispheres</h2>
+    
+    {% for hem in mars_listing.mars_hemisphere %}
+    <div class="col-md-3">
+          <p>{{ hem.title }}</p>
+          <img src="{{ hem.img_url }}" alt="hemisphers" width="300" height="300">
+    </div>
       {% endfor %}
 
-    <img src={{mars_listing.mars_hemisphere}}>
-    </div>
+    
+    
   </div>
   </div>
 </body>
